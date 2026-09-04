@@ -1,11 +1,9 @@
 import React from 'react';
-import BrandLogo from './BrandLogo';
+import Navbar from './Navbar';
 
-export function Header() {
+export function Header({ onOpenContact }) {
   return (
-    <header className="landing-header" role="banner">
-      <BrandLogo />
-    </header>
+    <Navbar onOpenContact={onOpenContact} />
   );
 }
 
