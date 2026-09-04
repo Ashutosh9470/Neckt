@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
+import backgroundVideo from '../assets/bg_video.mp4';
 
 export function Hero() {
   const videoRef = useRef(null);
@@ -36,7 +37,7 @@ export function Hero() {
           loop
           playsInline
           preload="metadata"
-          src="https://res.cloudinary.com/kpa6g7an/video/upload/v1788528073/bg_video.mp4"
+          src={backgroundVideo}
           poster="/hero.png"
         />
 

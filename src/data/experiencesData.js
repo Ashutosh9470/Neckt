@@ -7,7 +7,7 @@ export const FEATURED_EXPERIENCES = [
     description:
       'End-to-end party experiences brought to life through premium production, professional staging, lighting, sound, and coordination.',
     image: 'https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?auto=format&fit=crop&w=1200&q=85',
-    accentColor: '#E5A93C',
+    accentColor: '#6B147D',
     stats: 'Concept to execution'
   },
   {
@@ -18,7 +18,7 @@ export const FEATURED_EXPERIENCES = [
     description:
       'Concert and live show experiences shaped through professional staging, premium production, lighting, sound, and artist coordination.',
     image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=85',
-    accentColor: '#D4AF37',
+    accentColor: '#7D218F',
     stats: 'Premium production'
   },
   {
@@ -29,7 +29,7 @@ export const FEATURED_EXPERIENCES = [
     description:
       'Corporate events delivered with a design-led brand identity and coordinated production, vendors, artists, and venues.',
     image: 'https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=1200&q=85',
-    accentColor: '#F59E0B',
+    accentColor: '#A83FBA',
     stats: 'Design-led identity'
   },
   {
@@ -40,7 +40,7 @@ export const FEATURED_EXPERIENCES = [
     description:
       'Artist bookings supported by thoughtful coordination across artists, vendors, venues, and the wider live experience.',
     image: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=85',
-    accentColor: '#EAB308',
+    accentColor: '#D18ADD',
     stats: 'Artist coordination'
   }
 ];

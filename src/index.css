@@ -3,16 +3,16 @@
    ========================================================================== */
 
 :root {
-  --bg-space: #050507;
-  --bg-surface: #0a0a0e;
-  --bg-surface-elevated: #111116;
+  --bg-space: #08070a;
+  --bg-surface: #100c14;
+  --bg-surface-elevated: #1a1320;
 
-  /* Accent Palette: Molten Amber & Radiant Copper */
-  --accent-amber: #f59e0b;
-  --accent-amber-glow: #fbbf24;
-  --accent-copper: #ea580c;
-  --accent-gold: #fde047;
-  --accent-amber-rgb: 245, 158, 11;
+  /* Accent Palette: Deep Purple */
+  --accent-amber: #6b147d;
+  --accent-amber-glow: #a83fba;
+  --accent-copper: #3d0648;
+  --accent-gold: #d18add;
+  --accent-amber-rgb: 107, 20, 125;
 
   /* Typography Colors */
   --text-primary: #ffffff;
@@ -21,16 +21,16 @@
   --text-quaternary: #4b5563;
 
   /* Glassmorphic Tokens */
-  --glass-bg: rgba(18, 18, 24, 0.55);
-  --glass-card-bg: rgba(18, 18, 24, 0.5);
+  --glass-bg: rgba(24, 16, 29, 0.62);
+  --glass-card-bg: rgba(24, 16, 29, 0.58);
   --glass-border: rgba(255, 255, 255, 0.08);
   --glass-border-subtle: rgba(255, 255, 255, 0.05);
-  --glass-border-hover: rgba(245, 158, 11, 0.35);
+  --glass-border-hover: rgba(168, 63, 186, 0.4);
   --glass-highlight: rgba(255, 255, 255, 0.12);
 
   /* Shadows & Glows */
-  --glow-amber-soft: 0 0 40px rgba(245, 158, 11, 0.18);
-  --glow-amber-intense: 0 0 20px rgba(251, 191, 36, 0.6);
+  --glow-amber-soft: 0 0 40px rgba(107, 20, 125, 0.24);
+  --glow-amber-intense: 0 0 20px rgba(168, 63, 186, 0.62);
   --shadow-card: 0 25px 50px -12px rgba(0, 0, 0, 0.75),
                  0 0 1px 1px rgba(255, 255, 255, 0.06) inset;
 
@@ -64,7 +64,7 @@ html, body {
 }
 
 ::selection {
-  background: rgba(245, 158, 11, 0.35);
+  background: rgba(107, 20, 125, 0.35);
   color: #ffffff;
 }
 
@@ -75,7 +75,7 @@ html, body {
   display: flex;
   flex-direction: column;
   position: relative;
-  background: radial-gradient(circle at 50% 35%, #0e0e16 0%, #050507 75%);
+  background: radial-gradient(circle at 50% 35%, #21132a 0%, #08070a 75%);
 }
 
 /* Cinematic Film Grain Overlay */
@@ -109,7 +109,7 @@ html, body {
   width: 80vw;
   max-width: 1000px;
   height: 60vh;
-  background: radial-gradient(ellipse at center, rgba(245, 158, 11, 0.26) 0%, rgba(234, 88, 12, 0.16) 35%, rgba(180, 40, 5, 0.04) 65%, transparent 80%);
+  background: radial-gradient(ellipse at center, rgba(107, 20, 125, 0.3) 0%, rgba(61, 6, 72, 0.18) 35%, rgba(61, 6, 72, 0.05) 65%, transparent 80%);
   filter: blur(75px);
   transform: rotate(-18deg) scale(1.05);
   border-radius: 50%;
@@ -137,7 +137,7 @@ html, body {
   width: 45vw;
   max-width: 550px;
   height: 38vh;
-  background: radial-gradient(circle at center, rgba(245, 158, 11, 0.1) 0%, rgba(234, 88, 12, 0.03) 50%, transparent 80%);
+  background: radial-gradient(circle at center, rgba(107, 20, 125, 0.12) 0%, rgba(61, 6, 72, 0.04) 50%, transparent 80%);
   filter: blur(70px);
   border-radius: 50%;
   animation: pulseGlow 12s ease-in-out infinite alternate;
@@ -277,17 +277,17 @@ html, body {
 }
 
 .contact-button:hover {
-  border-color: rgba(245, 158, 11, 0.45);
+  border-color: rgba(107, 20, 125, 0.45);
   color: var(--text-primary);
-  background: rgba(245, 158, 11, 0.06);
-  box-shadow: 0 0 24px rgba(245, 158, 11, 0.15);
+  background: rgba(107, 20, 125, 0.06);
+  box-shadow: 0 0 24px rgba(107, 20, 125, 0.15);
   transform: translateY(-1px);
 }
 
 .contact-button.is-copied {
-  border-color: rgba(245, 158, 11, 0.6);
-  background: rgba(245, 158, 11, 0.12);
-  box-shadow: 0 0 25px rgba(245, 158, 11, 0.25);
+  border-color: rgba(107, 20, 125, 0.6);
+  background: rgba(107, 20, 125, 0.12);
+  box-shadow: 0 0 25px rgba(107, 20, 125, 0.25);
 }
 
 .contact-button:focus-visible {
@@ -408,7 +408,7 @@ html, body {
 .progress-card:hover {
   border-color: rgba(255, 255, 255, 0.14);
   box-shadow: 0 30px 65px -10px rgba(0, 0, 0, 0.85),
-              0 0 30px rgba(245, 158, 11, 0.08);
+              0 0 30px rgba(107, 20, 125, 0.08);
   transform: translateY(-1px);
 }
 
@@ -480,10 +480,10 @@ html, body {
 .progress-bar-fill {
   height: 100%;
   border-radius: 9999px;
-  background: linear-gradient(90deg, #d97706 0%, #f59e0b 50%, #fbbf24 100%);
+  background: linear-gradient(90deg, #3d0648 0%, #6b147d 50%, #a83fba 100%);
   position: relative;
   transition: width 1.8s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 0 14px rgba(245, 158, 11, 0.45);
+  box-shadow: 0 0 14px rgba(107, 20, 125, 0.45);
 }
 
 /* Glowing Leading Edge Dot */
@@ -497,8 +497,8 @@ html, body {
   border-radius: 50%;
   background: #ffffff;
   box-shadow: 0 0 8px #ffffff,
-              0 0 16px #fbbf24,
-              0 0 24px #f59e0b;
+              0 0 16px #a83fba,
+              0 0 24px #6b147d;
 }
 
 /* Progress Description */
@@ -591,7 +591,7 @@ html, body {
 .developer-link:hover {
   color: var(--accent-amber-glow);
   border-bottom-color: var(--accent-amber);
-  text-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+  text-shadow: 0 0 12px rgba(107, 20, 125, 0.4);
 }
 
 .dev-link-icon {
@@ -854,7 +854,7 @@ html, body {
 .neckt-hero__cta-group { display: flex; gap: .8rem; margin-top: 2.2rem; flex-wrap: wrap; }
 .neckt-btn { display: inline-flex; align-items: center; gap: .65rem; border: 1px solid transparent; padding: .9rem 1.15rem; color: #fff; font: 600 .72rem var(--font-mono); letter-spacing: .08em; text-transform: uppercase; text-decoration: none; transition: var(--transition-smooth); }
 .neckt-btn--primary { background: var(--accent-amber); color: #111; }
-.neckt-btn--primary:hover { background: #ffd166; transform: translateY(-2px); }
+.neckt-btn--primary:hover { background: var(--accent-amber-glow); transform: translateY(-2px); }
 .neckt-btn--ghost { border-color: rgba(255,255,255,.3); background: rgba(255,255,255,.04); }
 .neckt-btn--ghost:hover { border-color: var(--accent-amber); color: var(--accent-amber); }
 .neckt-hero__scroll-indicator { position: absolute; right: 2rem; bottom: 2.5rem; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: .45rem; color: #fff; text-decoration: none; font: .6rem var(--font-mono); letter-spacing: .15em; }
@@ -880,7 +880,7 @@ html, body {
 .neckt-btn--ticket:hover { border-color: var(--accent-amber-glow); background: var(--accent-amber-glow); color: #111; transform: translateY(-2px); }
 .neckt-ticket-status { color: var(--text-secondary); font: .7rem var(--font-mono); letter-spacing: .06em; text-transform: uppercase; }
 .neckt-events__footer { display: flex; justify-content: flex-end; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.12); }
-.neckt-view-all-link { display: inline-flex; align-items: center; gap: .75rem; border: 1px solid rgba(245,158,11,.65); padding: .85rem 1.1rem; color: var(--accent-amber); font: 600 .68rem var(--font-mono); letter-spacing: .1em; text-decoration: none; text-transform: uppercase; transition: var(--transition-smooth); }
+.neckt-view-all-link { display: inline-flex; align-items: center; gap: .75rem; border: 1px solid var(--accent-amber); padding: .85rem 1.1rem; color: var(--accent-amber); font: 600 .68rem var(--font-mono); letter-spacing: .1em; text-decoration: none; text-transform: uppercase; transition: var(--transition-smooth); }
 .neckt-view-all-link:hover { background: var(--accent-amber); color: #111; transform: translateY(-2px); }
 .neckt-view-all-arrow { transition: transform .25s ease; }.neckt-view-all-link:hover .neckt-view-all-arrow { transform: translateX(3px); }
 .neckt-about-grid, .neckt-audience__grid, .neckt-contact__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
@@ -906,8 +906,8 @@ html, body {
 .neckt-exp-card__action-btn:hover { background: var(--accent-amber); color: #111; transform: translateY(-2px); }
 .neckt-exp-card__action-btn svg { transition: transform .25s ease; }
 .neckt-exp-card__action-btn:hover svg { transform: translate(2px, -2px); }
-.neckt-audience { background: #c7a15a !important; color: #111; }
-.neckt-audience .neckt-kicker, .neckt-audience .neckt-text-gold { color: #111; }
+.neckt-audience { background: #ffffff !important; color: #0b090d; }
+.neckt-audience .neckt-kicker, .neckt-audience .neckt-text-gold { color: var(--accent-amber); }
 .neckt-audience__content { max-width: 35rem; }
 .neckt-audience__list { display: grid; grid-template-columns: 1fr 1fr; margin: 2rem 0; border-top: 1px solid rgba(17,17,17,.35); }
 .neckt-audience__list span { display: flex; gap: .55rem; align-items: center; padding: .8rem 0; border-bottom: 1px solid rgba(17,17,17,.35); font-size: .88rem; }
