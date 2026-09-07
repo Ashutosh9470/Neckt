@@ -114,12 +114,7 @@ export function UpcomingEvents({ onSelectTicket }) {
         {/* View All Events Action Footer */}
         <div className="neckt-events__footer">
           <a
-            href="#events"
-            onClick={(e) => {
-              e.preventDefault();
-              const el = document.getElementById('events');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }}
+            href="/events"
             className="neckt-view-all-link"
           >
             <span>VIEW ALL EVENTS</span>

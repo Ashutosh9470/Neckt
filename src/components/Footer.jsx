@@ -9,12 +9,12 @@ export function Footer() {
         <BrandLogo />
 
         <nav className="footer-nav" aria-label="Footer Navigation">
-          <a href="#hero">Home</a>
-          <a href="#events">Events</a>
-          <a href="#experiences">Services</a>
-          <a href="#about">About</a>
-          <a href="#moments">Moments</a>
-          <a href="#contact">Contact</a>
+          <a href="/">Home</a>
+          <a href="/events">Events</a>
+          <a href="/services">Services</a>
+          <a href="/about">About</a>
+          <a href="/moments">Moments</a>
+          <a href="/contact">Contact</a>
         </nav>
 
         <div className="footer-contact-links">

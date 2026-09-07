@@ -861,6 +861,13 @@ html, body {
 .neckt-hero__scroll-mouse { width: 1.2rem; height: 2rem; border: 1px solid rgba(255,255,255,.7); border-radius: 1rem; padding-top: .35rem; }
 .neckt-hero__scroll-wheel { width: 2px; height: 5px; margin: auto; background: var(--accent-amber); }
 .neckt-hero__audio-toggle { position: absolute; right: 2rem; top: 7rem; z-index: 2; border: 0; background: transparent; color: #fff; display: flex; gap: .5rem; align-items: center; font: .6rem var(--font-mono); letter-spacing: .12em; }
+/* Page Intro Hero (inner pages) — shorter banner reusing video bg */
+.neckt-page-intro-hero { min-height: 55svh; align-items: center; padding: 10rem max(1.5rem, calc((100% - 1180px) / 2)) 5rem; }
+.neckt-page-intro__content { position: relative; z-index: 2; max-width: 850px; }
+.neckt-page-intro__content .neckt-kicker { margin-bottom: 0; }
+.neckt-page-intro__content .neckt-hero__headline { font-size: clamp(2.8rem, 7vw, 6.5rem); margin-bottom: 1.2rem; }
+.neckt-page-intro__text { max-width: 36rem; color: rgba(255,255,255,.75); font-size: 1.05rem; line-height: 1.65; }
+
 .neckt-events-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
 .neckt-event-card { display: grid; grid-template-columns: minmax(280px, .85fr) 1fr; border-top: 1px solid rgba(255,255,255,.16); padding-top: 1.5rem; gap: 2.5rem; }
 .neckt-event-card__media { min-height: 440px; position: relative; overflow: hidden; }

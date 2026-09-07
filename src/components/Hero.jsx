@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
-import backgroundVideo from '../assets/bg_video.mp4';
 
 export function Hero() {
   const videoRef = useRef(null);
@@ -15,14 +14,16 @@ export function Hero() {
 
   const scrollToEvents = (e) => {
     e.preventDefault();
-    const el = document.getElementById('events');
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    window.history.pushState({}, '', '/events');
+    window.dispatchEvent(new PopStateEvent('popstate'));
+    window.scrollTo(0, 0);
   };
 
   const scrollToAbout = (e) => {
     e.preventDefault();
-    const el = document.getElementById('about');
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    window.history.pushState({}, '', '/about');
+    window.dispatchEvent(new PopStateEvent('popstate'));
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -37,7 +38,7 @@ export function Hero() {
           loop
           playsInline
           preload="metadata"
-          src={backgroundVideo}
+          src="https://res.cloudinary.com/kpa6g7an/video/upload/v1788555515/bg_video.mp4"
           poster="/hero.png"
         />
 
@@ -65,7 +66,7 @@ export function Hero() {
         {/* Action CTAs */}
         <div className="neckt-hero__cta-group">
           <a
-            href="#events"
+            href="/events"
             onClick={scrollToEvents}
             className="neckt-btn neckt-btn--primary"
             id="hero-explore-cta"
@@ -75,7 +76,7 @@ export function Hero() {
           </a>
 
           <a
-            href="#about"
+            href="/about"
             onClick={scrollToAbout}
             className="neckt-btn neckt-btn--ghost"
             id="hero-discover-cta"

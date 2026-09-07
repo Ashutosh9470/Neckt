@@ -2,59 +2,46 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import BrandLogo from './BrandLogo';
 
-export function Navbar({ onOpenContact, onExploreEvents }) {
+const navLinks = [
+  { label: 'Home', path: '/' },
+  { label: 'Events', path: '/events' },
+  { label: 'Services', path: '/services' },
+  { label: 'About', path: '/about' },
+  { label: 'Moments', path: '/moments' },
+  { label: 'Contact', path: '/contact' }
+];
+
+export function Navbar({ onExploreEvents }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
+  const [activePath, setActivePath] = useState(window.location.pathname);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 40);
 
-      // Detect active section
-      const sections = ['hero', 'events', 'about', 'experiences', 'moments', 'contact'];
-      const scrollPos = window.scrollY + 200;
-
-      for (const sectionId of sections) {
-        const el = document.getElementById(sectionId);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPos >= top && scrollPos < top + height) {
-            setActiveSection(sectionId);
-            break;
-          }
-        }
-      }
+      setActivePath(window.location.pathname);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('popstate', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('popstate', handleScroll);
+    };
   }, []);
 
-  const scrollToSection = (e, sectionId) => {
+  const navigateTo = (e, path) => {
     e.preventDefault();
     setMobileMenuOpen(false);
-
-    if (sectionId === 'contact' && onOpenContact) {
-      onOpenContact();
+    if (window.location.pathname === path) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
-
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    window.history.pushState({}, '', path);
+    window.dispatchEvent(new PopStateEvent('popstate'));
+    window.scrollTo(0, 0);
   };
-
-  const navLinks = [
-    { label: 'Home', id: 'hero' },
-    { label: 'Events', id: 'events' },
-    { label: 'Services', id: 'experiences' },
-    { label: 'About', id: 'about' },
-    { label: 'Moments', id: 'moments' },
-    { label: 'Contact', id: 'contact' }
-  ];
 
   return (
     <>
@@ -72,13 +59,13 @@ export function Navbar({ onOpenContact, onExploreEvents }) {
           <nav className="neckt-navbar__nav" aria-label="Main Navigation">
             <ul className="neckt-navbar__list">
               {navLinks.map((link) => {
-                const isActive = activeSection === link.id;
+                const isActive = activePath === link.path;
                 return (
-                  <li key={link.id} className="neckt-navbar__item">
+                  <li key={link.path} className="neckt-navbar__item">
                     <a
-                      href={`#${link.id}`}
+                      href={link.path}
                       className={`neckt-navbar__link ${isActive ? 'neckt-navbar__link--active' : ''}`}
-                      onClick={(e) => scrollToSection(e, link.id)}
+                      onClick={(e) => navigateTo(e, link.path)}
                     >
                       <span>{link.label}</span>
                       {isActive && <span className="neckt-navbar__indicator" />}
@@ -92,14 +79,11 @@ export function Navbar({ onOpenContact, onExploreEvents }) {
           {/* Desktop CTA */}
           <div className="neckt-navbar__actions">
             <a
-              href="#events"
+              href="/events"
               onClick={(e) => {
                 e.preventDefault();
-                if (onExploreEvents) onExploreEvents();
-                else {
-                  const el = document.getElementById('events');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }
+                setMobileMenuOpen(false);
+                onExploreEvents?.();
               }}
               className="neckt-btn neckt-btn--nav"
               id="nav-explore-cta"
@@ -144,11 +128,11 @@ export function Navbar({ onOpenContact, onExploreEvents }) {
           <nav className="neckt-mobile-drawer__nav">
             <ul className="neckt-mobile-drawer__list">
               {navLinks.map((link) => (
-                <li key={link.id} className="neckt-mobile-drawer__item">
+                <li key={link.path} className="neckt-mobile-drawer__item">
                   <a
-                    href={`#${link.id}`}
-                    className={`neckt-mobile-drawer__link ${activeSection === link.id ? 'neckt-mobile-drawer__link--active' : ''}`}
-                    onClick={(e) => scrollToSection(e, link.id)}
+                    href={link.path}
+                    className={`neckt-mobile-drawer__link ${activePath === link.path ? 'neckt-mobile-drawer__link--active' : ''}`}
+                    onClick={(e) => navigateTo(e, link.path)}
                   >
                     <span>{link.label}</span>
                     <ArrowRight size={16} className="neckt-mobile-drawer__arrow" />
@@ -160,9 +144,9 @@ export function Navbar({ onOpenContact, onExploreEvents }) {
 
           <div className="neckt-mobile-drawer__footer">
             <a
-              href="#events"
+              href="/events"
               className="neckt-btn neckt-btn--primary neckt-btn--full"
-              onClick={(e) => scrollToSection(e, 'events')}
+              onClick={(e) => navigateTo(e, '/events')}
             >
               <span>Explore Events</span>
               <ArrowRight size={16} />

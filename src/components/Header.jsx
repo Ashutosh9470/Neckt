@@ -1,9 +1,9 @@
 import React from 'react';
 import Navbar from './Navbar';
 
-export function Header({ onOpenContact }) {
+export function Header({ onOpenContact, onExploreEvents }) {
   return (
-    <Navbar onOpenContact={onOpenContact} />
+    <Navbar onOpenContact={onOpenContact} onExploreEvents={onExploreEvents} />
   );
 }
 

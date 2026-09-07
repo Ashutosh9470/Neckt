@@ -8,7 +8,7 @@ export function BrandLogo({ className = '', withTagline = false }) {
 
   return (
     <a
-      href="#hero"
+      href="/"
       className={`neckt-logo-link ${className}`}
       aria-label="NECKT — Home"
       onClick={handleScrollToTop}
