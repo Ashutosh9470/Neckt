@@ -10,6 +10,7 @@ import BackgroundLighting from './components/BackgroundLighting';
 import AudienceSection from './components/AudienceSection';
 import ContactSection from './components/ContactSection';
 import PageIntro from './components/PageIntro';
+import HomeSummary from './components/HomeSummary';
 
 const routes = {
   '/': 'home',
@@ -86,6 +87,7 @@ export function App() {
   return (
     <PageFrame onOpenContact={handleContact} onExploreEvents={() => navigate('/events')}>
       <Hero />
+      <HomeSummary />
     </PageFrame>
   );
 }
