@@ -14,3 +14,7 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the Oxlint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+
+## SEO deployment
+
+SEO metadata defaults to `https://neckt.in`, based on the existing `hello@neckt.in` contact domain. Set `VITE_SITE_URL` to the deployed site origin when it differs, and update `public/sitemap.xml` and `public/robots.txt` to match that origin before deployment.

@@ -70,17 +70,17 @@ export function BackgroundLighting() {
         >
           <defs>
             <linearGradient id="ribbonGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#f59e0b" stopOpacity="0" />
-              <stop offset="35%" stopColor="#ea580c" stopOpacity="0.38" />
-              <stop offset="60%" stopColor="#f59e0b" stopOpacity="0.5" />
-              <stop offset="85%" stopColor="#fbbf24" stopOpacity="0.4" />
-              <stop offset="100%" stopColor="#d97706" stopOpacity="0" />
+              <stop offset="0%" stopColor="#6b147d" stopOpacity="0" />
+              <stop offset="35%" stopColor="#3d0648" stopOpacity="0.38" />
+              <stop offset="60%" stopColor="#6b147d" stopOpacity="0.5" />
+              <stop offset="85%" stopColor="#a83fba" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="#3d0648" stopOpacity="0" />
             </linearGradient>
 
             <linearGradient id="ribbonGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#fb923c" stopOpacity="0" />
-              <stop offset="45%" stopColor="#f59e0b" stopOpacity="0.25" />
-              <stop offset="100%" stopColor="#9a3412" stopOpacity="0" />
+              <stop offset="0%" stopColor="#a83fba" stopOpacity="0" />
+              <stop offset="45%" stopColor="#6b147d" stopOpacity="0.25" />
+              <stop offset="100%" stopColor="#3d0648" stopOpacity="0" />
             </linearGradient>
 
             <filter id="ribbonBlur1" x="-20%" y="-20%" width="140%" height="140%">
@@ -112,7 +112,7 @@ export function BackgroundLighting() {
           {/* Whispering tertiary filament */}
           <path
             d="M 350 100 C 750 220, 1050 500, 1500 350"
-            stroke="#fbbf24"
+            stroke="#a83fba"
             strokeWidth="14"
             strokeOpacity="0.22"
             fill="none"
@@ -130,7 +130,7 @@ export function BackgroundLighting() {
             width: 400,
             height: 400,
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(245, 158, 11, 0.09) 0%, rgba(234, 88, 12, 0.03) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(107, 20, 125, 0.14) 0%, rgba(61, 6, 72, 0.05) 40%, transparent 70%)',
             pointerEvents: 'none',
             filter: 'blur(50px)',
             willChange: 'transform',
