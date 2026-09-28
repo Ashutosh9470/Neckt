@@ -52,13 +52,13 @@ export function AboutNeckt({ onInquire }) {
 
             <p className="neckt-about__lead">
               NECKT came into existence in 2026 with the initiative of its team from Patna, with a
-              vision to build a live entertainment culture for Bihar.
+              vision to build a live entertainment culture across India.
             </p>
 
             <p className="neckt-about__description">
               Our mission is to bring premium, professionally produced events to a city that has never
               had a recurring concert brand of its own. We began with the planning of AFTER DARK and are
-              building the foundations of a new entertainment ecosystem for Patna's youth.
+              building the foundations of a new entertainment ecosystem for India's youth.
             </p>
 
             {/* Three Simple Strength Blocks */}
@@ -104,6 +104,7 @@ export function AboutNeckt({ onInquire }) {
                 alt="Atmospheric concert lighting and stage energy at a NECKT live event"
                 className="neckt-about__visual-img"
                 loading="lazy"
+                decoding="async"
               />
               <div className="neckt-about__visual-gradient" />
               <div className="neckt-about__visual-border-corner neckt-about__visual-border-corner--tl" />

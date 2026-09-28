@@ -35,7 +35,7 @@ export function EventGallery() {
               className={`neckt-gallery-item neckt-gallery-item--${moment.span}`}
             >
               <div className="neckt-gallery-item__inner">
-                <img src={moment.image} alt={moment.title} className="neckt-gallery-item__img" loading="lazy" />
+                <img src={moment.image} alt={moment.title} className="neckt-gallery-item__img" loading="lazy" decoding="async" />
                 <div className="neckt-gallery-item__scrim" />
 
                 <div className="neckt-gallery-item__overlay">

@@ -10,7 +10,7 @@ export function AudienceSection() {
           <h2 className="neckt-heading-1">BUILT FOR THE<br /><span className="neckt-text-gold">CURIOUS CROWD.</span></h2>
         </div>
         <div className="neckt-audience__content">
-          <p className="neckt-lead">A curated audience shaping the next chapter of live entertainment in Bihar.</p>
+          <p className="neckt-lead">A curious audience shaping the next chapter of live entertainment across India.</p>
           <div className="neckt-audience__list">
             {['Young professionals aged 21–45', 'Entrepreneurs & founders', 'Corporate leaders', 'Creators & influencers', 'Students', 'Lifestyle & music enthusiasts'].map((item) => <span key={item}><Users size={15} />{item}</span>)}
           </div>

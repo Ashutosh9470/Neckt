@@ -4,7 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 const focusPoints = [
   ['01', 'LIVE EVENTS', 'Concerts, parties and shows made for real crowd energy.'],
   ['02', 'CURATED FORMATS', 'Distinctive sound, light and performance experiences.'],
-  ['03', 'LOCAL CULTURE', 'A new live entertainment ecosystem taking shape in Bihar.']
+  ['03', 'INDIAN LIVE CULTURE', 'A new live entertainment ecosystem taking shape across India.']
 ];
 
 export function HomeSummary() {
@@ -21,11 +21,17 @@ export function HomeSummary() {
           </div>
           <div className="neckt-home-summary__copy">
             <p className="neckt-lead">NECKT creates moments that stay long after the lights go down.</p>
-            <p>We are a Patna-born live entertainment brand creating, curating and delivering experiences that bring people together. From the first idea to the final encore, every detail is shaped around the feeling of being there.</p>
-            <a href="/about" className="neckt-view-all-link">
-              <span>DISCOVER NECKT</span>
-              <ArrowUpRight size={16} />
-            </a>
+            <p>Founded by a team from Patna, NECKT is a live entertainment brand creating, curating and delivering experiences across India. From the first idea to the final encore, every detail is shaped around the feeling of being there.</p>
+            <div className="neckt-home-summary__link-row">
+              <a href="/about" className="neckt-view-all-link">
+                <span>DISCOVER NECKT</span>
+                <ArrowUpRight size={16} />
+              </a>
+              <a href="/services" className="neckt-view-all-link">
+                <span>EXPLORE SERVICES</span>
+                <ArrowUpRight size={16} />
+              </a>
+            </div>
           </div>
         </div>
 

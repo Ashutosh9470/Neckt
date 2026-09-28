@@ -11,6 +11,9 @@ import AudienceSection from './components/AudienceSection';
 import ContactSection from './components/ContactSection';
 import PageIntro from './components/PageIntro';
 import HomeSummary from './components/HomeSummary';
+import HomeEventFeature from './components/HomeEventFeature';
+import NotFoundPage from './components/NotFoundPage';
+import { updateDocumentSeo } from './seo';
 
 const routes = {
   '/': 'home',
@@ -30,7 +33,7 @@ function useCurrentRoute() {
     return () => window.removeEventListener('popstate', handleLocationChange);
   }, []);
 
-  return routes[path] || 'home';
+  return routes[path] || 'not-found';
 }
 
 function navigate(path) {
@@ -63,11 +66,17 @@ function RoutedPage({ route, onContact, onTickets }) {
   if (route === 'about') return <><PageIntro page="about" /><AboutNeckt onInquire={onContact} /><AudienceSection /></>;
   if (route === 'moments') return <><PageIntro page="moments" /><EventGallery /></>;
   if (route === 'contact') return <><PageIntro page="contact" /><ContactSection /></>;
+  if (route === 'not-found') return <NotFoundPage />;
   return null;
 }
 
 export function App() {
   const route = useCurrentRoute();
+
+  React.useEffect(() => {
+    updateDocumentSeo(route);
+  }, [route]);
+
   const handleContact = () => {
     navigate('/contact');
   };
@@ -87,6 +96,7 @@ export function App() {
   return (
     <PageFrame onOpenContact={handleContact} onExploreEvents={() => navigate('/events')}>
       <Hero />
+      <HomeEventFeature />
       <HomeSummary />
     </PageFrame>
   );

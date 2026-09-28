@@ -13,7 +13,7 @@ export function ContactSection() {
           <a href="mailto:hello@neckt.in"><Mail size={17} />hello@neckt.in</a>
           <a href="tel:+919546646668"><Phone size={17} />+91-9546646668</a>
           <a href="tel:+919905307514"><Phone size={17} />+91-9905307514</a>
-          <span><MapPin size={17} />Startup Bihar Incubation Center Near ATC<br />Patna 800014, Bihar, India</span>
+          <span><MapPin size={17} />Startup Bihar Incubation Center Near ATC<br />Patna 800014, Bihar, India<br />Serving projects across India</span>
           <a className="neckt-contact__social" href="https://www.instagram.com/neckt.india/" target="_blank" rel="noopener noreferrer">Instagram&nbsp; @Neckt.India</a>
         </div>
       </div>

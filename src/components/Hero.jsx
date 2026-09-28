@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
+import heroPoster from '../assets/hero.png';
 
 export function Hero() {
   const videoRef = useRef(null);
@@ -39,7 +40,7 @@ export function Hero() {
           playsInline
           preload="metadata"
           src="https://res.cloudinary.com/kpa6g7an/video/upload/v1788555515/bg_video.mp4"
-          poster="/hero.png"
+          poster={heroPoster}
         />
 
         {/* Subtle Dark Cinematic Scrim & Gradient Overlays for Readability */}

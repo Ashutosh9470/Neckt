@@ -1,4 +1,5 @@
 import React from 'react';
+import heroPoster from '../assets/hero.png';
 
 const PAGE_INTROS = {
   events: {
@@ -13,8 +14,8 @@ const PAGE_INTROS = {
   },
   about: {
     label: 'THE NECKT POINT OF VIEW',
-    title: <>LIVE CULTURE,<br /><span className="neckt-text-gold">MADE IN BIHAR.</span></>,
-    text: 'NECKT is building the foundations of a new entertainment ecosystem for Patna and its curious, energetic audience.'
+    title: <>LIVE CULTURE,<br /><span className="neckt-text-gold">MADE IN INDIA.</span></>,
+    text: 'NECKT is building the foundations of a new entertainment ecosystem across India for a curious, energetic audience.'
   },
   moments: {
     label: 'FROM THE ARCHIVE',
@@ -51,7 +52,7 @@ export function PageIntro({ page }) {
           playsInline
           preload="metadata"
           src="https://res.cloudinary.com/kpa6g7an/video/upload/v1788555515/bg_video.mp4"
-          poster="/hero.png"
+          poster={heroPoster}
         />
         <div className="neckt-hero__overlay-cinematic" />
         <div className="neckt-hero__overlay-vignette" />

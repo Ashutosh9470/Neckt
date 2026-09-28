@@ -10,7 +10,7 @@ export const GALLERY_MOMENTS = [
     id: 'moment-1',
     title: 'Live Energy',
     event: 'NECKT Visual Archive',
-    location: 'Patna, Bihar',
+    location: 'India',
     image: moments1,
     caption: 'Beams cutting through the arena haze during soundcheck.'
   },

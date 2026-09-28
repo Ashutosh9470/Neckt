@@ -153,7 +153,7 @@ export function Navbar({ onExploreEvents }) {
             </a>
 
             <div className="neckt-mobile-drawer__meta">
-              <span className="neckt-mobile-drawer__city">PATNA • BIHAR</span>
+              <span className="neckt-mobile-drawer__city">PAN INDIA</span>
               <a href="mailto:hello@neckt.in" className="neckt-mobile-drawer__email">
                 hello@neckt.in
               </a>

@@ -23,6 +23,9 @@ export function FeaturedExperiences({ onInquire }) {
               <p className="neckt-subheading">
                 Signature formats pushing the boundaries of sound, light, and performance.
               </p>
+              <p className="neckt-experiences__supporting-copy">
+                Planning a live experience? <a href="/contact">Talk to NECKT about your event.</a> See the <a href="/events">upcoming live events</a> for the kind of atmosphere we create.
+              </p>
             </div>
           </div>
         </div>
@@ -41,6 +44,7 @@ export function FeaturedExperiences({ onInquire }) {
                   alt={exp.name}
                   className="neckt-exp-card__img"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="neckt-exp-card__overlay" />
                 <div className="neckt-exp-card__ambient-glow" />
