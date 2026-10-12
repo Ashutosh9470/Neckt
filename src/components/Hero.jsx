@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
-import heroPoster from '../assets/hero.png';
+import heroPoster from '../assets/hero.jpg';
 
 export function Hero() {
   const videoRef = useRef(null);

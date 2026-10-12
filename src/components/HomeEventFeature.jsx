@@ -2,8 +2,8 @@ import React from 'react';
 import { ArrowRight, Calendar, MapPin, Ticket } from 'lucide-react';
 import { UPCOMING_EVENTS } from '../data/eventsData';
 
-export function HomeEventFeature() {
-  const event = UPCOMING_EVENTS.find((item) => item.id === 'literati-26-roots-and-rhythm');
+export function HomeEventFeature({ onSelectTicket }) {
+  const event = UPCOMING_EVENTS.find((item) => item.id === 'after-dark-2026');
 
   if (!event) return null;
 
@@ -12,8 +12,8 @@ export function HomeEventFeature() {
       <div className="neckt-container">
         <div className="neckt-home-event__layout">
           <div className="neckt-home-event__media">
-            <img src={event.image} alt="LITERATI’26 - Roots & Rhythm" loading="lazy" />
-            <span className="neckt-home-event__edition">3-4 OCTOBER 2026</span>
+            <img src={event.image} alt={`${event.title} event`} loading="lazy" />
+            <span className="neckt-home-event__edition">{event.category}</span>
           </div>
 
           <div className="neckt-home-event__content">
@@ -34,17 +34,29 @@ export function HomeEventFeature() {
             </ul>
 
             <div className="neckt-home-event__actions">
-              <a
-                className="neckt-btn neckt-btn--primary"
-                href={event.ticketUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Ticket size={16} />
-                <span>GET TICKETS</span>
-                <ArrowRight size={14} />
-              </a>
-              <span className="neckt-home-event__eligibility">Free entry · BIT Mesra, Patna Campus students</span>
+              {event.ticketUrl ? (
+                <a
+                  className="neckt-btn neckt-btn--primary"
+                  href={event.ticketUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Ticket size={16} />
+                  <span>GET TICKETS</span>
+                  <ArrowRight size={14} />
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  className="neckt-btn neckt-btn--primary"
+                  onClick={() => onSelectTicket(event)}
+                >
+                  <Ticket size={16} />
+                  <span>GET TICKETS</span>
+                  <ArrowRight size={14} />
+                </button>
+              )}
+              <span className="neckt-home-event__eligibility">{event.ticketStatus}</span>
             </div>
           </div>
         </div>

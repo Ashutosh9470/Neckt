@@ -96,7 +96,7 @@ export function App() {
   return (
     <PageFrame onOpenContact={handleContact} onExploreEvents={() => navigate('/events')}>
       <Hero />
-      <HomeEventFeature />
+      <HomeEventFeature onSelectTicket={handleTickets} />
       <HomeSummary />
     </PageFrame>
   );

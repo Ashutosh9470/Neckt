@@ -1,7 +1,7 @@
 import literatiCover from '../assets/literati.jpg';
+import afterDarkCover from '../assets/after_dark.JPEG';
 
-export const UPCOMING_EVENTS = [
-  {
+const literatiEvent = {
     id: 'literati-26-roots-and-rhythm',
     title: 'LITERATI’26 - ROOTS & RHYTHM',
     category: 'Literary & Cultural Festival',
@@ -60,7 +60,9 @@ export const UPCOMING_EVENTS = [
         ]
       }
     ]
-  },
+};
+
+export const UPCOMING_EVENTS = [
   {
     id: 'after-dark-2026',
     title: 'AFTER DARK',
@@ -71,8 +73,10 @@ export const UPCOMING_EVENTS = [
     venue: 'Location to be announced',
     description:
       'AFTER DARK is a premier concert designed to bring together the best of live music, energy, and performance. This electrifying night is your chance to feel the music, lose yourself in the moment, and experience live entertainment like never before.',
-    image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=85',
+    image: afterDarkCover,
     ticketStatus: 'Tickets to be announced',
     highlights: ['Live artists and DJ sets', 'Immersive lighting', 'Premium production']
   }
 ];
+
+export const PAST_EVENTS = [literatiEvent];
