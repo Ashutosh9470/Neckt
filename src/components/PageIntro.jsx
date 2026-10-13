@@ -1,5 +1,5 @@
 import React from 'react';
-import heroPoster from '../assets/hero.png';
+import heroPoster from '../assets/hero.jpg';
 
 const PAGE_INTROS = {
   events: {
