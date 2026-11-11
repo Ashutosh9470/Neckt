@@ -68,7 +68,7 @@ export const UPCOMING_EVENTS = [
     title: 'AFTER DARK',
     category: 'Live Concert',
     tag: "NECKT'S FIRST LIVE CONCERT EXPERIENCE",
-    date: '12 DECEMBER 2026',
+    date: 'Coming soon',
     time: '',
     venue: 'Location to be announced',
     description:
